@@ -51,15 +51,11 @@ $('.navbar li  ').click(function(){
    }) 
 <br/>- (this section built to highlight each iteam that was scrolled to it's secton by adding Active Class on navbar link and remove the siblings)    
 4.
-
    $(window).scroll(function(){
     $('.block').each(function(){
       if($(window).scrollTop() > $(this).offset().top){
         console.log($(this).attr('id'));
         var blockId = $(this).attr('id');
-        $('.navbar  a').removeClass('active ');
-        $('.navbar li a[data-scroll="'+blockId+'"]').addClass('active ');
-      }})
-   })
+        $('.navbar  li').removeClass('active ');
+        $('.navbar li[data-scroll="'+blockId+'"]').addClass('active ');
 <br/>- (sync navbar links with sections  )      
-   
